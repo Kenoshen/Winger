@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile 'com.badlogicgames.gdx:gdx:1.6.4'
+    compile 'com.badlogicgames.gdx:gdx-box2d:1.6.4'
+    compile 'com.badlogicgames.gdx:gdx-controllers:1.6.4'
+
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.6.0'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.6.0'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.6.0'
+
+
+    testCompile 'junit:junit:4.12'
+
+    testCompile 'com.badlogicgames.gdx:gdx-controllers-desktop:1.6.4'
+    testCompile 'com.badlogicgames.gdx:gdx-controllers-platform:1.6.4'
+    testCompile 'com.badlogicgames.gdx:gdx-backend-lwjgl:1.6.4'
+}
+
+jar {
+    version =  '0.1.0'
+}
+
