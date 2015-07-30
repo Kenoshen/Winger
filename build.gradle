@@ -21,7 +21,14 @@ dependencies {
     testCompile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
 }
 
+task fatJar(type: Jar) {
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
 jar {
     version =  '0.1.0'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
 
