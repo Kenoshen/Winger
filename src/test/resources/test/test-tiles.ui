@@ -1,0 +1,89 @@
+{ 
+	"elements": 
+	[ 
+		{ 
+			"id": "container", 
+			"isEnabled": false, 
+			"isVisible": false, 
+			"type": "grid", 
+			"row": -1, 
+			"column": 3, 
+			"padding": 20, 
+			"x": "50%", 
+			"y": "50%", 
+			"children": 
+			[ 
+				{ 
+					"id": "tl", 
+					"text": "top left"
+				}, 
+				{ 
+					"id": "t", 
+					"text": "top"
+				}, 
+				{ 
+					"id": "tr", 
+					"text": "top right"
+				}, 
+				{ 
+					"id": "l", 
+					"text": "left"
+				}, 
+				{ 
+					"id": "c", 
+					"text": "center"
+				}, 
+				{ 
+					"id": "r", 
+					"text": "right"
+				}, 
+				{ 
+					"id": "bl", 
+					"text": "bottom left"
+				}, 
+				{ 
+					"id": "b", 
+					"text": "bottom"
+				}, 
+				{ 
+					"id": "br", 
+					"text": "bottom right"
+				}
+			]
+		}, 
+		{ 
+			"id": "back", 
+			"text": "Back", 
+			"width": "10%", 
+			"height": "10%", 
+			"color": "green", 
+			"texture": "white", 
+			"alignment": "bottom-left", 
+			"transitionOnSelect": "main"
+		}, 
+		{ 
+			"id": "help", 
+			"isEnabled": false, 
+			"text": "Shows off the isTiled attribute on CSprite", 
+			"textColor": "white", 
+			"x": "98%", 
+			"y": "98%", 
+			"width": "200", 
+			"height": "200", 
+			"alignment": "top-right", 
+			"textAlignment": "top-right"
+		}
+	], 
+	"global": 
+	{ 
+		"font": "default", 
+		"width": 200, 
+		"height": 200, 
+		"textColor": "white"
+	}, 
+	"transition": 
+	{ 
+		"name": "fade", 
+		"time": 1000
+	}
+}

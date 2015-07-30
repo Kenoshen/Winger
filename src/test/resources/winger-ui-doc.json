@@ -1,0 +1,636 @@
+{
+  "elements": [
+    {
+      "type": "default",
+      "properties": [
+        {
+          "name": "id",
+          "default": null,
+          "value": [
+            "string"
+          ],
+          "description": "Should be a unique name for the element"
+        },
+        {
+          "name": "is-enabled",
+          "default": true,
+          "value": [
+            "boolean"
+          ],
+          "description": "Does the element respond to update events"
+        },
+        {
+          "name": "is-visible",
+          "default": true,
+          "value": [
+            "boolean"
+          ],
+          "description": "Is the element drawn to the screen"
+        },
+        {
+          "name": "has-focus",
+          "default": false,
+          "value": [
+            "boolean"
+          ],
+          "description": "Does the element have the focus"
+        },
+        {
+          "name": "x",
+          "default": 0,
+          "value": [
+            "int",
+            "float",
+            "percent"
+          ],
+          "description": "The x coordinate in screen coordinates"
+        },
+        {
+          "name": "y",
+          "default": 0,
+          "value": [
+            "int",
+            "float",
+            "percent"
+          ],
+          "description": "The y coordinate in screen coordinates"
+        },
+        {
+          "name": "z",
+          "default": 0,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The depth of the element when drawn"
+        },
+        {
+          "name": "width",
+          "default": 0,
+          "value": [
+            "int",
+            "float",
+            "percent"
+          ],
+          "description": "The width of the element in screen pixels"
+        },
+        {
+          "name": "height",
+          "default": 0,
+          "value": [
+            "int",
+            "float",
+            "percent"
+          ],
+          "description": "The width of the element in screen pixels"
+        },
+        {
+          "name": "rotation",
+          "default": 0,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The rotation of the element in degrees counter-clockwise"
+        },
+        {
+          "name": "text",
+          "default": null,
+          "value": [
+            "string"
+          ],
+          "description": "The text to display over the element"
+        },
+        {
+          "name": "alignment",
+          "default": "center",
+          "value": [
+            "alignment"
+          ],
+          "description": "The alignment of the origin of the element (the relative (0, 0) position)"
+        },
+        {
+          "name": "text-alignment",
+          "default": "center",
+          "value": [
+            "alignment"
+          ],
+          "description": "The alignment of the text within the element"
+        },
+        {
+          "name": "color",
+          "default": "white",
+          "value": [
+            "color"
+          ],
+          "description": "The color tinting of the element"
+        },
+        {
+          "name": "color-hover",
+          "default": "white",
+          "value": [
+            "color"
+          ],
+          "description": "The color tinting of the element when it is being hovered over"
+        },
+        {
+          "name": "color-select",
+          "default": "white",
+          "value": [
+            "color"
+          ],
+          "description": "The color tinting of the element when it is being selected"
+        },
+        {
+          "name": "color-text",
+          "default": "black",
+          "value": [
+            "color"
+          ],
+          "description": "The color of the text"
+        },
+        {
+          "name": "icon",
+          "default": null,
+          "value": [
+            "texture"
+          ],
+          "description": "The name of the texture of the icon to be drawn over the main texture"
+        },
+        {
+          "name": "texture",
+          "default": null,
+          "value": [
+            "texture"
+          ],
+          "description": "The name of the main texture of the element that is drawn while in a neutral state"
+        },
+        {
+          "name": "texture-hover",
+          "default": null,
+          "value": [
+            "texture"
+          ],
+          "description": "The name of the texture of the element that is drawn while in a hover state"
+        },
+        {
+          "name": "texture-select",
+          "default": null,
+          "value": [
+            "texture"
+          ],
+          "description": "The name of the texture of the element that is drawn while in a selected state"
+        },
+        {
+          "name": "font",
+          "default": null,
+          "value": [
+            "font"
+          ],
+          "description": "The name of the font to draw the text with"
+        },
+        {
+          "name": "on-hover-start",
+          "default": null,
+          "value": [
+            "event"
+          ],
+          "description": "The event name that is to be called when the element is hovered over"
+        },
+        {
+          "name": "on-hover-end",
+          "default": null,
+          "value": [
+            "event"
+          ],
+          "description": "The event name that is to be called when the element ceases to be hovered over"
+        },
+        {
+          "name": "on-select-start",
+          "default": null,
+          "value": [
+            "event"
+          ],
+          "description": "The event name that is to be called when the element is selected"
+        },
+        {
+          "name": "on-select-end",
+          "default": null,
+          "value": [
+            "event"
+          ],
+          "description": "The event name that is to be called when the element ceases to be selected"
+        },
+        {
+          "name": "on-drag-start",
+          "default": null,
+          "value": [
+            "event"
+          ],
+          "description": "The event name that is to be called when the element is dragged"
+        },
+        {
+          "name": "on-drag-end",
+          "default": null,
+          "value": [
+            "event"
+          ],
+          "description": "The event name that is to be called when the element ceases to be dragged"
+        },
+        {
+          "name": "transition-on-select",
+          "default": null,
+          "value": [
+            "transition"
+          ],
+          "description": "The name of the page to transition to when this element is selected"
+        },
+        {
+          "name": "children",
+          "default": [
+          ],
+          "value": [
+            "array"
+          ],
+          "description": "A list of elements that consider this element to be their root"
+        }
+      ]
+    },
+    {
+      "type": "drag",
+      "properties": [
+        {
+          "name": "color-drag",
+          "default": "white",
+          "value": [
+            "color"
+          ],
+          "description": "The color tinting of the element while it is in a dragging state"
+        },
+        {
+          "name": "use-icon",
+          "default": true,
+          "value": [
+            "boolean"
+          ],
+          "description": "Should the drag image include the icon"
+        },
+        {
+          "name": "use-background",
+          "default": true,
+          "value": [
+            "boolean"
+          ],
+          "description": "Should the drag image include the main texture"
+        },
+        {
+          "name": "use-text",
+          "default": true,
+          "value": [
+            "boolean"
+          ],
+          "description": "Should the drag image include the text"
+        },
+        {
+          "name": "center-on-mouse",
+          "default": false,
+          "value": [
+            "boolean"
+          ],
+          "description": "Should the drag image center it's relative (0, 0) on the mouse position"
+        },
+        {
+          "name": "move-on-drag",
+          "default": false,
+          "value": [
+            "boolean"
+          ],
+          "description": "Should this element move while it is being dragged"
+        },
+        {
+          "name": "snap-to-x",
+          "default": false,
+          "value": [
+            "boolean"
+          ],
+          "description": "Should the dragging be limited only to the x-axis"
+        },
+        {
+          "name": "snap-to-y",
+          "default": false,
+          "value": [
+            "boolean"
+          ],
+          "description": "Should the dragging be limited only to the y-axis"
+        },
+        {
+          "name": "min-x",
+          "default": 1,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The minimum parent-relative x-coordinate that dragging snaps to"
+        },
+        {
+          "name": "max-x",
+          "default": -1,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The maximum parent-relative x-coordinate that dragging snaps to"
+        },
+        {
+          "name": "min-y",
+          "default": 1,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The minimum parent-relative y-coordinate that dragging snaps to"
+        },
+        {
+          "name": "max-y",
+          "default": -1,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The maximum parent-relative y-coordinate that dragging snaps to"
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "properties": [
+        {
+          "name": "row",
+          "default": -1,
+          "value": [
+            "int"
+          ],
+          "description": "The number of rows the grid contains (-1 goes to infinity)"
+        },
+        {
+          "name": "column",
+          "default": -1,
+          "value": [
+            "int"
+          ],
+          "description": "The number of columns the grid contains (-1 goes to infinity)"
+        },
+        {
+          "name": "padding",
+          "default": 0,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The padding (left/right/top/bottom) between the elements in the grid"
+        },
+        {
+          "name": "padding-left",
+          "default": 0,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The left-side padding between the elements in the grid"
+        },
+        {
+          "name": "padding-right",
+          "default": 0,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The right-side padding between the elements in the grid"
+        },
+        {
+          "name": "padding-top",
+          "default": 0,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The top-side padding between the elements in the grid"
+        },
+        {
+          "name": "padding-bottom",
+          "default": 0,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The bottom-side padding between the elements in the grid"
+        }
+      ]
+    },
+    {
+      "type": "scroll",
+      "properties": [
+        {
+          "name": "horizontal",
+          "default": true,
+          "value": [
+            "boolean"
+          ],
+          "description": "Should the horizontal scroll bar be enabled and visible"
+        },
+        {
+          "name": "horizontal-flip",
+          "default": false,
+          "value": [
+            "boolean"
+          ],
+          "description": "Should the horizontal scroll bar be displayed at the top of the scroll element"
+        },
+        {
+          "name": "vertical",
+          "default": true,
+          "value": [
+            "boolean"
+          ],
+          "description": "Should the vertical scroll bar be enabled and visible"
+        },
+        {
+          "name": "vertical-flip",
+          "default": false,
+          "value": [
+            "boolean"
+          ],
+          "description": "Should the vertical scroll bar be displayed at the left side of the scroll element"
+        },
+        {
+          "name": "padding",
+          "default": 0,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The padding (left/right/top/bottom) from the edge of the scroll window to the elements"
+        },
+        {
+          "name": "padding-left",
+          "default": 0,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The left-side padding from the edge of the scroll window to the elements"
+        },
+        {
+          "name": "padding-right",
+          "default": 0,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The right-side padding from the edge of the scroll window to the elements"
+        },
+        {
+          "name": "padding-top",
+          "default": 0,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The top-side padding from the edge of the scroll window to the elements"
+        },
+        {
+          "name": "padding-bottom",
+          "default": 0,
+          "value": [
+            "int",
+            "float"
+          ],
+          "description": "The bottom-side padding from the edge of the scroll window to the elements"
+        }
+      ]
+    }
+  ],
+  "values": [
+    {
+      "name": "string",
+      "value": [
+        "example"
+      ]
+    },
+    {
+      "name": "boolean",
+      "value": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "int",
+      "value": [
+        0,
+        2,
+        -1
+      ]
+    },
+    {
+      "name": "float",
+      "value": [
+        0.1,
+        2.5,
+        -1.3
+      ]
+    },
+    {
+      "name": "percent",
+      "value": [
+        "0%",
+        "100%",
+        "28%"
+      ]
+    },
+    {
+      "name": "alignment",
+      "value": [
+        "center",
+        "bottom-left",
+        "bottom",
+        "bottom-right",
+        "right",
+        "top-right",
+        "top",
+        "top-left",
+        "left"
+      ]
+    },
+    {
+      "name": "color",
+      "value": [
+        "#00FFCC",
+        "#00ffcc",
+        "#0FC",
+        "#0fc",
+        "#00FFCC33",
+        "#00ffcc33",
+        "#0fc3",
+        "rgb(0, 1, 0.6)",
+        "rgba(0, 1, 0.6, 0.2)",
+        "green",
+        "blue",
+        "red",
+        "darkred",
+        "limegreen"
+      ]
+    },
+    {
+      "name": "texture",
+      "value": [
+        "texture-name-from-texture-manager"
+      ]
+    },
+    {
+      "name": "font",
+      "value": [
+        "default",
+        "font-name-from-font-manager"
+      ]
+    },
+    {
+      "name": "event",
+      "value": [
+        "event-name-to-register-for"
+      ]
+    },
+    {
+      "name": "transition",
+      "value": [
+        "page-name-to-transition-to"
+      ]
+    },
+    {
+      "name": "children",
+      "value": [
+        [
+          {
+            "id": "child0",
+            "x": 1,
+            "y": 5,
+            "width": "40%",
+            "height": "25%",
+            "texture": "pause"
+          },
+          {
+            "id": "child1",
+            "x": 6,
+            "y": 15,
+            "width": "40%",
+            "height": "25%",
+            "texture": "play"
+          }
+        ]
+      ]
+    }
+  ],
+  "settings": {
+    "format": "$!<settingName>"
+  }
+}

@@ -1,0 +1,120 @@
+{ 
+	"elements": 
+	[ 
+		{ 
+			"id": "container", 
+			"type": "grid", 
+			"row": -1, 
+			"column": 6, 
+			"padding": 20, 
+			"x": "50%", 
+			"y": "50%", 
+			"children": 
+			[ 
+				{ 
+					"texture": "blue.jump1"
+				}, 
+				{ 
+					"texture": "green.jump1"
+				}, 
+				{ 
+					"texture": "green.jump2"
+				}, 
+				{ 
+					"texture": "red.jump1"
+				}, 
+				{ 
+					"texture": "red.jump2"
+				}, 
+				{ 
+					"texture": "ui.blueBox"
+				}, 
+				{ 
+					"texture": "ui.redBox"
+				}, 
+				{ 
+					"texture": "various.arch1"
+				}, 
+				{ 
+					"texture": "various.arch2"
+				}, 
+				{ 
+					"texture": "yellow.run1"
+				}, 
+				{ 
+					"texture": "yellow.run2"
+				}, 
+				{ 
+					"texture": "yellow.run3"
+				}, 
+				{ 
+					"texture": "yellow.run4"
+				}, 
+				{ 
+					"texture": "white.run1"
+				}, 
+				{ 
+					"texture": "white.run2"
+				}, 
+				{ 
+					"texture": "white.run3"
+				}, 
+				{ 
+					"texture": "white.run4"
+				}, 
+				{ 
+					"texture": "various.skull"
+				}, 
+				{ 
+					"texture": "various.devil"
+				}, 
+				{ 
+					"texture": "various.devil1"
+				}, 
+				{ 
+					"texture": "various.devil2"
+				}, 
+				{ 
+					"texture": "various.devil3"
+				}, 
+				{ 
+					"texture": "various.devil4"
+				}
+			]
+		}, 
+		{ 
+			"id": "back", 
+			"text": "Back", 
+			"width": "10%", 
+			"height": "10%", 
+			"color": "green", 
+			"texture": "white", 
+			"alignment": "bottom-left", 
+			"transitionOnSelect": "main"
+		}, 
+		{ 
+			"id": "help", 
+			"text": "Demonstrates drawing different textures from atlas", 
+			"textColor": "white", 
+			"x": "98%", 
+			"y": "98%", 
+			"width": "200", 
+			"height": "200", 
+			"alignment": "top-right", 
+			"textAlignment": "top-right", 
+			"font": "default"
+		}
+	], 
+	"global": 
+	{ 
+		"font": "default", 
+		"width": 80, 
+		"height": 80, 
+		"alignment": "center"
+	}, 
+	"transition": 
+	{ 
+		"name": "fade", 
+		"time": 1000
+	}
+}

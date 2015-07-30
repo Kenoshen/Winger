@@ -1,0 +1,52 @@
+{ 
+	"elements": 
+	[ 
+		{ 
+			"id": "textBox", 
+			"type": "textbox", 
+			"text": "You can enter text in here", 
+			"x": "50%", 
+			"y": "50%", 
+			"textAlignment": "top-left", 
+			"width": 400, 
+			"height": 400
+		}, 
+		{ 
+			"id": "back", 
+			"text": "Back", 
+			"width": "10%", 
+			"height": "10%", 
+			"alignment": "bottom-left", 
+			"transitionOnSelect": "main"
+		}, 
+		{ 
+			"id": "help", 
+			"text": "Click the text box to give it focus.", 
+			"textColor": "white", 
+			"x": "98%", 
+			"y": "98%", 
+			"width": "200", 
+			"height": "200", 
+			"alignment": "top-right", 
+			"textAlignment": "top-right", 
+			"font": "default"
+		}
+	], 
+	"variables": 
+	{ 
+		
+	}, 
+	"global": 
+	{ 
+		"font": "default", 
+		"texture": "green", 
+		"textureHover": "blue", 
+		"textureSelect": "red"
+	}, 
+	"transition": 
+	{ 
+		"name": "fade", 
+		"time": 1000
+	}, 
+	"useKeyboardForNavigation": false
+}

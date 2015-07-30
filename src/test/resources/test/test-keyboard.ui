@@ -1,0 +1,48 @@
+{ 
+	"elements": 
+	[ 
+		{ 
+			"id": "display", 
+			"color": "blue", 
+			"x": "50%", 
+			"y": "50%"
+		}, 
+		{ 
+			"id": "back", 
+			"isEnabled": true, 
+			"text": "Back", 
+			"width": "10%", 
+			"height": "10%", 
+			"color": "green", 
+			"texture": "white", 
+			"alignment": "bottom-left", 
+			"transitionOnSelect": "main"
+		}, 
+		{ 
+			"id": "help", 
+			"text": "Shows keyboard key presses", 
+			"textColor": "white", 
+			"x": "98%", 
+			"y": "98%", 
+			"width": "200", 
+			"height": "200", 
+			"alignment": "top-right", 
+			"textAlignment": "top-right", 
+			"font": "default"
+		}
+	], 
+	"global": 
+	{ 
+		"font": "default", 
+		"texture": "white", 
+		"isEnabled": false, 
+		"width": 200, 
+		"height": 200, 
+		"alignment": "center"
+	}, 
+	"transition": 
+	{ 
+		"name": "fade", 
+		"time": 1000
+	}
+}

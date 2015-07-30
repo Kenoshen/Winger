@@ -1,0 +1,39 @@
+{ 
+	"elements": 
+	[ 
+		{ 
+			"id": "back", 
+			"text": "Back", 
+			"width": "10%", 
+			"height": "10%", 
+			"color": "green", 
+			"texture": "white", 
+			"alignment": "bottom-left", 
+			"transitionOnSelect": "main"
+		}, 
+		{ 
+			"id": "help", 
+			"isEnabled": false, 
+			"text": "Shows off the isTiled attribute on CSprite", 
+			"textColor": "white", 
+			"x": "98%", 
+			"y": "98%", 
+			"width": "200", 
+			"height": "200", 
+			"alignment": "top-right", 
+			"textAlignment": "top-right"
+		}
+	], 
+	"global": 
+	{ 
+		"font": "default", 
+		"width": 400, 
+		"height": 400, 
+		"textColor": "white"
+	}, 
+	"transition": 
+	{ 
+		"name": "fade", 
+		"time": 1000
+	}
+}

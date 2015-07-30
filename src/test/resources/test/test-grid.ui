@@ -1,0 +1,568 @@
+{ 
+	"elements": 
+	[ 
+		{ 
+			"id": "test", 
+			"text": "0000", 
+			"x": "50%", 
+			"y": "50%", 
+			"width": "100%", 
+			"height": "100%", 
+			"alignment": "center", 
+			"texture": "gear", 
+			"textureHover": "gear"
+		}, 
+		{ 
+			"id": "container0", 
+			"text": "bottom-left", 
+			"type": "grid", 
+			"row": 3, 
+			"column": 3, 
+			"padding": 1, 
+			"alignment": "bottom-left", 
+			"texture": "pink", 
+			"textureHover": "red", 
+			"textureSelect": "pink", 
+			"x": "20%", 
+			"y": "20%", 
+			"width": 0, 
+			"height": 0, 
+			"children": 
+			[ 
+				{ 
+					"id": "0", 
+					"text": "0"
+				}, 
+				{ 
+					"id": "1", 
+					"text": "1"
+				}, 
+				{ 
+					"id": "2", 
+					"text": "2"
+				}, 
+				{ 
+					"id": "3", 
+					"text": "3"
+				}, 
+				{ 
+					"id": "4", 
+					"text": "4", 
+					"width": "$!<midW>", 
+					"height": "$!<midH>"
+				}, 
+				{ 
+					"id": "5", 
+					"text": "5"
+				}, 
+				{ 
+					"id": "6", 
+					"text": "6"
+				}, 
+				{ 
+					"id": "7", 
+					"text": "7"
+				}, 
+				{ 
+					"id": "8", 
+					"text": "8"
+				}
+			]
+		}, 
+		{ 
+			"id": "container1", 
+			"text": "bottom", 
+			"type": "grid", 
+			"row": 3, 
+			"column": 3, 
+			"padding": 1, 
+			"alignment": "bottom", 
+			"texture": "pink", 
+			"textureHover": "red", 
+			"textureSelect": "pink", 
+			"x": "50%", 
+			"y": "20%", 
+			"width": 0, 
+			"height": 0, 
+			"children": 
+			[ 
+				{ 
+					"id": "0", 
+					"text": "0"
+				}, 
+				{ 
+					"id": "1", 
+					"text": "1"
+				}, 
+				{ 
+					"id": "2", 
+					"text": "2"
+				}, 
+				{ 
+					"id": "3", 
+					"text": "3"
+				}, 
+				{ 
+					"id": "4", 
+					"text": "4", 
+					"width": "$!<midW>", 
+					"height": "$!<midH>"
+				}, 
+				{ 
+					"id": "5", 
+					"text": "5"
+				}, 
+				{ 
+					"id": "6", 
+					"text": "6"
+				}, 
+				{ 
+					"id": "7", 
+					"text": "7"
+				}, 
+				{ 
+					"id": "8", 
+					"text": "8"
+				}
+			]
+		}, 
+		{ 
+			"id": "container2", 
+			"text": "bottom-right", 
+			"type": "grid", 
+			"row": 3, 
+			"column": 3, 
+			"padding": 1, 
+			"alignment": "bottom-right", 
+			"texture": "pink", 
+			"textureHover": "red", 
+			"textureSelect": "pink", 
+			"x": "80%", 
+			"y": "20%", 
+			"width": 0, 
+			"height": 0, 
+			"children": 
+			[ 
+				{ 
+					"id": "0", 
+					"text": "0"
+				}, 
+				{ 
+					"id": "1", 
+					"text": "1"
+				}, 
+				{ 
+					"id": "2", 
+					"text": "2"
+				}, 
+				{ 
+					"id": "3", 
+					"text": "3"
+				}, 
+				{ 
+					"id": "4", 
+					"text": "4", 
+					"width": "$!<midW>", 
+					"height": "$!<midH>"
+				}, 
+				{ 
+					"id": "5", 
+					"text": "5"
+				}, 
+				{ 
+					"id": "6", 
+					"text": "6"
+				}, 
+				{ 
+					"id": "7", 
+					"text": "7"
+				}, 
+				{ 
+					"id": "8", 
+					"text": "8"
+				}
+			]
+		}, 
+		{ 
+			"id": "container3", 
+			"text": "right", 
+			"type": "grid", 
+			"row": 3, 
+			"column": 3, 
+			"padding": 1, 
+			"alignment": "right", 
+			"texture": "pink", 
+			"textureHover": "red", 
+			"textureSelect": "pink", 
+			"x": "80%", 
+			"y": "50%", 
+			"width": 0, 
+			"height": 0, 
+			"children": 
+			[ 
+				{ 
+					"id": "0", 
+					"text": "0"
+				}, 
+				{ 
+					"id": "1", 
+					"text": "1"
+				}, 
+				{ 
+					"id": "2", 
+					"text": "2"
+				}, 
+				{ 
+					"id": "3", 
+					"text": "3"
+				}, 
+				{ 
+					"id": "4", 
+					"text": "4", 
+					"width": "$!<midW>", 
+					"height": "$!<midH>"
+				}, 
+				{ 
+					"id": "5", 
+					"text": "5"
+				}, 
+				{ 
+					"id": "6", 
+					"text": "6"
+				}, 
+				{ 
+					"id": "7", 
+					"text": "7"
+				}, 
+				{ 
+					"id": "8", 
+					"text": "8"
+				}
+			]
+		}, 
+		{ 
+			"id": "container4", 
+			"text": "top-right", 
+			"type": "grid", 
+			"row": 3, 
+			"column": 3, 
+			"padding": 1, 
+			"alignment": "top-right", 
+			"texture": "pink", 
+			"textureHover": "red", 
+			"textureSelect": "pink", 
+			"x": "80%", 
+			"y": "80%", 
+			"width": 0, 
+			"height": 0, 
+			"children": 
+			[ 
+				{ 
+					"id": "0", 
+					"text": "0"
+				}, 
+				{ 
+					"id": "1", 
+					"text": "1"
+				}, 
+				{ 
+					"id": "2", 
+					"text": "2"
+				}, 
+				{ 
+					"id": "3", 
+					"text": "3"
+				}, 
+				{ 
+					"id": "4", 
+					"text": "4", 
+					"width": "$!<midW>", 
+					"height": "$!<midH>"
+				}, 
+				{ 
+					"id": "5", 
+					"text": "5"
+				}, 
+				{ 
+					"id": "6", 
+					"text": "6"
+				}, 
+				{ 
+					"id": "7", 
+					"text": "7"
+				}, 
+				{ 
+					"id": "8", 
+					"text": "8"
+				}
+			]
+		}, 
+		{ 
+			"id": "container5", 
+			"text": "top", 
+			"type": "grid", 
+			"row": 3, 
+			"column": 3, 
+			"padding": 1, 
+			"alignment": "top", 
+			"texture": "pink", 
+			"textureHover": "red", 
+			"textureSelect": "pink", 
+			"x": "50%", 
+			"y": "80%", 
+			"width": 0, 
+			"height": 0, 
+			"children": 
+			[ 
+				{ 
+					"id": "0", 
+					"text": "0"
+				}, 
+				{ 
+					"id": "1", 
+					"text": "1"
+				}, 
+				{ 
+					"id": "2", 
+					"text": "2"
+				}, 
+				{ 
+					"id": "3", 
+					"text": "3"
+				}, 
+				{ 
+					"id": "4", 
+					"text": "4", 
+					"width": "$!<midW>", 
+					"height": "$!<midH>"
+				}, 
+				{ 
+					"id": "5", 
+					"text": "5"
+				}, 
+				{ 
+					"id": "6", 
+					"text": "6"
+				}, 
+				{ 
+					"id": "7", 
+					"text": "7"
+				}, 
+				{ 
+					"id": "8", 
+					"text": "8"
+				}
+			]
+		}, 
+		{ 
+			"id": "container6", 
+			"text": "top-left", 
+			"type": "grid", 
+			"row": 3, 
+			"column": 3, 
+			"padding": 1, 
+			"alignment": "top-left", 
+			"texture": "pink", 
+			"textureHover": "red", 
+			"textureSelect": "pink", 
+			"x": "20%", 
+			"y": "80%", 
+			"width": 0, 
+			"height": 0, 
+			"children": 
+			[ 
+				{ 
+					"id": "0", 
+					"text": "0"
+				}, 
+				{ 
+					"id": "1", 
+					"text": "1"
+				}, 
+				{ 
+					"id": "2", 
+					"text": "2"
+				}, 
+				{ 
+					"id": "3", 
+					"text": "3"
+				}, 
+				{ 
+					"id": "4", 
+					"text": "4", 
+					"width": "$!<midW>", 
+					"height": "$!<midH>"
+				}, 
+				{ 
+					"id": "5", 
+					"text": "5"
+				}, 
+				{ 
+					"id": "6", 
+					"text": "6"
+				}, 
+				{ 
+					"id": "7", 
+					"text": "7"
+				}, 
+				{ 
+					"id": "8", 
+					"text": "8"
+				}
+			]
+		}, 
+		{ 
+			"id": "container7", 
+			"text": "left", 
+			"type": "grid", 
+			"row": 3, 
+			"column": 3, 
+			"padding": 1, 
+			"alignment": "left", 
+			"texture": "pink", 
+			"textureHover": "red", 
+			"textureSelect": "pink", 
+			"x": "20%", 
+			"y": "50%", 
+			"width": 0, 
+			"height": 0, 
+			"children": 
+			[ 
+				{ 
+					"id": "0", 
+					"text": "0"
+				}, 
+				{ 
+					"id": "1", 
+					"text": "1"
+				}, 
+				{ 
+					"id": "2", 
+					"text": "2"
+				}, 
+				{ 
+					"id": "3", 
+					"text": "3", 
+					"width": "$!<midW>", 
+					"height": "$!<midH>"
+				}, 
+				{ 
+					"id": "4", 
+					"text": "4"
+				}, 
+				{ 
+					"id": "5", 
+					"text": "5"
+				}, 
+				{ 
+					"id": "6", 
+					"text": "6"
+				}, 
+				{ 
+					"id": "7", 
+					"text": "7"
+				}, 
+				{ 
+					"id": "8", 
+					"text": "8"
+				}
+			]
+		}, 
+		{ 
+			"id": "container8", 
+			"text": "center", 
+			"type": "grid", 
+			"row": 3, 
+			"column": 3, 
+			"padding": 1, 
+			"alignment": "center", 
+			"texture": "pink", 
+			"textureHover": "red", 
+			"textureSelect": "pink", 
+			"x": "50%", 
+			"y": "50%", 
+			"width": 0, 
+			"height": 0, 
+			"children": 
+			[ 
+				{ 
+					"id": "0", 
+					"text": "0"
+				}, 
+				{ 
+					"id": "1", 
+					"text": "1"
+				}, 
+				{ 
+					"id": "2", 
+					"text": "2"
+				}, 
+				{ 
+					"id": "3", 
+					"text": "3"
+				}, 
+				{ 
+					"id": "4", 
+					"text": "4"
+				}, 
+				{ 
+					"id": "5", 
+					"text": "5"
+				}, 
+				{ 
+					"id": "6", 
+					"text": "6"
+				}, 
+				{ 
+					"id": "7", 
+					"text": "7", 
+					"width": "$!<midW>", 
+					"height": "$!<midH>"
+				}, 
+				{ 
+					"id": "8", 
+					"text": "8"
+				}
+			]
+		}, 
+		{ 
+			"id": "back", 
+			"text": "Back", 
+			"width": "10%", 
+			"height": "10%", 
+			"alignment": "bottom-left", 
+			"transitionOnSelect": "main"
+		}, 
+		{ 
+			"id": "help", 
+			"text": "Demonstrates different alignments\nused on varying shaped grid\nelements", 
+			"textColor": "white", 
+			"x": "98%", 
+			"y": "98%", 
+			"width": "200", 
+			"height": "200", 
+			"alignment": "top-right", 
+			"textAlignment": "top-right", 
+			"font": "default"
+		}
+	], 
+	"variables": 
+	{ 
+		"midW": 40, 
+		"midH": 40
+	}, 
+	"global": 
+	{ 
+		"font": "default", 
+		"width": 30, 
+		"height": 30, 
+		"texture": "green", 
+		"textureHover": "blue", 
+		"textureSelect": "red"
+	}, 
+	"transition": 
+	{ 
+		"name": "fade", 
+		"time": 1000
+	}
+}

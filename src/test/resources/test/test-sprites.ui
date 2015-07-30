@@ -1,0 +1,131 @@
+{ 
+	"elements": 
+	[ 
+		{ 
+			"id": "container", 
+			"type": "grid", 
+			"row": -1, 
+			"column": 4, 
+			"padding": 5, 
+			"x": "50%", 
+			"y": "50%", 
+			"children": 
+			[ 
+				{ 
+					"id": "blue", 
+					"onSelectStart": "blue"
+				}, 
+				{ 
+					"id": "green", 
+					"onSelectStart": "green"
+				}, 
+				{ 
+					"id": "red", 
+					"onSelectStart": "red"
+				}, 
+				{ 
+					"id": "yellow", 
+					"onSelectStart": "yellow"
+				}, 
+				{ 
+					"id": "blueRun", 
+					"onSelectStart": "blueRun"
+				}, 
+				{ 
+					"id": "greenRun", 
+					"onSelectStart": "greenRun"
+				}, 
+				{ 
+					"id": "redRun", 
+					"onSelectStart": "redRun"
+				}, 
+				{ 
+					"id": "yellowRun", 
+					"onSelectStart": "yellowRun"
+				}, 
+				{ 
+					"id": "door", 
+					"onSelectStart": "door"
+				}, 
+				{ 
+					"id": "door2", 
+					"onSelectStart": "door2"
+				}, 
+				{ 
+					"id": "door3", 
+					"onSelectStart": "door3"
+				}, 
+				{ 
+					"id": "door4", 
+					"onSelectStart": "door4"
+				}, 
+				{ 
+					"id": "blueRun2", 
+					"onSelectStart": "blueRun2"
+				}, 
+				{ 
+					"id": "greenRun2", 
+					"onSelectStart": "greenRun2"
+				}, 
+				{ 
+					"id": "redRun2", 
+					"onSelectStart": "redRun2"
+				}, 
+				{ 
+					"id": "yellowRun2", 
+					"onSelectStart": "yellowRun2"
+				}, 
+				{ 
+					"id": "rnd1", 
+					"onSelectStart": "rnd1"
+				}, 
+				{ 
+					"id": "rnd2", 
+					"onSelectStart": "rnd2"
+				}, 
+				{ 
+					"id": "rnd3", 
+					"onSelectStart": "rnd3"
+				}, 
+				{ 
+					"id": "rnd4", 
+					"onSelectStart": "rnd4"
+				}
+			]
+		}, 
+		{ 
+			"id": "back", 
+			"text": "Back", 
+			"width": "10%", 
+			"height": "10%", 
+			"color": "green", 
+			"texture": "white", 
+			"alignment": "bottom-left", 
+			"transitionOnSelect": "main"
+		}, 
+		{ 
+			"id": "help", 
+			"text": "Demonstrates different sprite animations.\nSome have random frame timers.\nSpace: stop/start all animations\nClick: stop/start clicked animation", 
+			"textColor": "white", 
+			"x": "98%", 
+			"y": "98%", 
+			"width": "200", 
+			"height": "200", 
+			"alignment": "top-right", 
+			"textAlignment": "top-right", 
+			"font": "default"
+		}
+	], 
+	"global": 
+	{ 
+		"font": "default", 
+		"width": 100, 
+		"height": 100, 
+		"alignment": "center"
+	}, 
+	"transition": 
+	{ 
+		"name": "fade", 
+		"time": 1000
+	}
+}

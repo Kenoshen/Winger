@@ -1,0 +1,39 @@
+{ 
+	"elements": 
+	[ 
+		{ 
+			"id": "back", 
+			"type": "default", 
+			"text": "Back", 
+			"width": "10%", 
+			"height": "10%", 
+			"texture": "green", 
+			"alignment": "bottom-left", 
+			"transitionOnSelect": "main"
+		}, 
+		{ 
+			"id": "help", 
+			"text": "Tests the CRectangle Class", 
+			"textColor": "white", 
+			"x": "98%", 
+			"y": "98%", 
+			"width": "200", 
+			"height": "200", 
+			"alignment": "top-right", 
+			"textAlignment": "top-right"
+		}
+	], 
+	"variables": 
+	{ 
+		
+	}, 
+	"global": 
+	{ 
+		"font": "default"
+	}, 
+	"transition": 
+	{ 
+		"name": "fade", 
+		"time": 1000
+	}
+}

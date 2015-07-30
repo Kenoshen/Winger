@@ -1,0 +1,208 @@
+{ 
+	"elements": 
+	[ 
+		{ 
+			"id": "scroll-test", 
+			"type": "scroll", 
+			"isEnabled": false, 
+			"x": "15%", 
+			"y": "10%", 
+			"width": "80%", 
+			"height": "80%", 
+			"padding": 100, 
+			"color": "#050", 
+			"alignment": "bottom-left", 
+			"children": 
+			[ 
+				{ 
+					"id": "container0", 
+					"type": "grid", 
+					"row": 3, 
+					"column": 3, 
+					"padding": 1, 
+					"alignment": "center", 
+					"x": 0, 
+					"y": 0, 
+					"width": 0, 
+					"height": 0, 
+					"children": 
+					[ 
+						{ 
+							"id": "0", 
+							"text": "0", 
+							"groups": 
+							[ 
+								"contentObj"
+							]
+						}, 
+						{ 
+							"id": "1", 
+							"text": "1", 
+							"groups": 
+							[ 
+								"contentObj"
+							]
+						}, 
+						{ 
+							"id": "2", 
+							"text": "2", 
+							"groups": 
+							[ 
+								"contentObj"
+							]
+						}, 
+						{ 
+							"id": "3", 
+							"text": "3", 
+							"groups": 
+							[ 
+								"contentObj"
+							]
+						}, 
+						{ 
+							"id": "4", 
+							"text": "4", 
+							"groups": 
+							[ 
+								"contentObj"
+							]
+						}, 
+						{ 
+							"id": "5", 
+							"text": "5", 
+							"groups": 
+							[ 
+								"contentObj"
+							]
+						}, 
+						{ 
+							"id": "6", 
+							"text": "6", 
+							"groups": 
+							[ 
+								"contentObj"
+							]
+						}, 
+						{ 
+							"id": "7", 
+							"text": "7", 
+							"groups": 
+							[ 
+								"contentObj"
+							]
+						}, 
+						{ 
+							"id": "8", 
+							"text": "8", 
+							"groups": 
+							[ 
+								"contentObj"
+							]
+						}
+					]
+				}, 
+				{ 
+					"id": "scroll-test2", 
+					"type": "scroll", 
+					"isEnabled": false, 
+					"x": "50%", 
+					"y": "50%", 
+					"width": "50%", 
+					"height": "50%", 
+					"padding": 100, 
+					"alignment": "bottom-left", 
+					"verticalFlip": true, 
+					"horizontalFlip": true, 
+					"children": 
+					[ 
+						{ 
+							"id": "test1", 
+							"text": "test1", 
+							"x": "10%", 
+							"y": "10%", 
+							"groups": 
+							[ 
+								"contentObj"
+							]
+						}, 
+						{ 
+							"id": "test2", 
+							"text": "test2", 
+							"x": "30%", 
+							"y": "30%", 
+							"groups": 
+							[ 
+								"contentObj"
+							]
+						}, 
+						{ 
+							"id": "test3", 
+							"text": "test3", 
+							"x": "50%", 
+							"y": "50%", 
+							"groups": 
+							[ 
+								"contentObj"
+							]
+						}, 
+						{ 
+							"id": "test4", 
+							"text": "test4", 
+							"x": "70%", 
+							"y": "70%", 
+							"groups": 
+							[ 
+								"contentObj"
+							]
+						}
+					]
+				}
+			]
+		}, 
+		{ 
+			"id": "back", 
+			"text": "Back", 
+			"width": "10%", 
+			"height": "10%", 
+			"alignment": "bottom-left", 
+			"transitionOnSelect": "main"
+		}, 
+		{ 
+			"id": "help", 
+			"text": "Demonstrates how scroll elements modify\nposition and source rectangles of\nchild elements.", 
+			"textColor": "white", 
+			"x": "98%", 
+			"y": "98%", 
+			"width": "200", 
+			"height": "200", 
+			"alignment": "top-right", 
+			"textAlignment": "top-right", 
+			"font": "default"
+		}
+	], 
+	"variables": 
+	{ 
+		
+	}, 
+	"groups": 
+	{ 
+		"contentObj": 
+		{ 
+			"color": "blue", 
+			"colorHover": "yellow", 
+			"colorSelect": "red", 
+			"width": "20%", 
+			"height": "20%"
+		}
+	}, 
+	"global": 
+	{ 
+		"font": "default", 
+		"texture": "white"
+	}, 
+	"transition": 
+	{ 
+		"name": "fade", 
+		"time": 1000
+	}
+}

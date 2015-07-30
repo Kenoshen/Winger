@@ -173,8 +173,17 @@ public class Tups
         protected T1 item1;
         protected T2 item2;
         protected T3 item3;
-        
-        
+
+
+        public Tup3(T1 i
+                    et the third item of the tuple
+                            *
+                            *@return
+                            */
+                            public T3 i3() {
+            return item3;
+        }
+
         /**
          * Gtem1, T2 item2, T3 item3)
          {
@@ -195,7 +204,6 @@ public class Tups
             return item1;
         }
 
-
         /**
          * G
          et the second item of the tuple
@@ -206,18 +214,6 @@ public class Tups
         {
             return item2;
         }
-
-
-        public Tup3(T1 i
-                    et the third item of the tuple
-                            *
-         * @return
-         */
-        public T3 i3()
-        {
-            return item3;
-        }
-
 
         /**
          * G
@@ -256,8 +252,17 @@ public class Tups
         protected T2 item2;
         protected T3 item3;
         protected T4 item4;
-        
-        
+
+
+        public Tup4(T1 i
+                    et the forth item of the tuple
+                            *
+                            *@return
+                            */
+                            public T4 i4() {
+            return item4;
+        }
+
         /**
          * Gtem1, T2 item2, T3 item3, T4 item4)
          {
@@ -279,7 +284,6 @@ public class Tups
             return item1;
         }
 
-
         /**
          * G
          et the second item of the tuple
@@ -291,7 +295,6 @@ public class Tups
             return item2;
         }
 
-
         /**
          * G
          et the third item of the tuple
@@ -302,18 +305,6 @@ public class Tups
         {
             return item3;
         }
-
-
-        public Tup4(T1 i
-                    et the forth item of the tuple
-                            *
-         * @return
-         */
-        public T4 i4()
-        {
-            return item4;
-        }
-
 
         /**
          * G

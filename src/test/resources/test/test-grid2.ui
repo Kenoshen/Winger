@@ -1,0 +1,99 @@
+{ 
+	"elements": 
+	[ 
+		{ 
+			"id": "container0", 
+			"type": "grid", 
+			"row": 3, 
+			"column": 3, 
+			"padding": 1, 
+			"x": "50%", 
+			"y": "50%", 
+			"color": "pink", 
+			"colorHover": "pink", 
+			"colorSelect": "pink", 
+			"children": 
+			[ 
+				{ 
+					"id": "0", 
+					"text": "0"
+				}, 
+				{ 
+					"id": "1", 
+					"text": "1"
+				}, 
+				{ 
+					"id": "2", 
+					"text": "2"
+				}, 
+				{ 
+					"id": "3", 
+					"text": "3"
+				}, 
+				{ 
+					"id": "4", 
+					"text": "4", 
+					"width": "$!<bigW>", 
+					"height": "$!<bigH>"
+				}, 
+				{ 
+					"id": "5", 
+					"text": "5"
+				}, 
+				{ 
+					"id": "6", 
+					"text": "6"
+				}, 
+				{ 
+					"id": "7", 
+					"text": "7"
+				}, 
+				{ 
+					"id": "8", 
+					"text": "8"
+				}
+			]
+		}, 
+		{ 
+			"id": "back", 
+			"text": "Back", 
+			"width": "10%", 
+			"height": "10%", 
+			"alignment": "bottom-left", 
+			"transitionOnSelect": "main"
+		}, 
+		{ 
+			"id": "help", 
+			"text": "Demonstrates different alignments\nused on varying shaped grid\nelements", 
+			"textColor": "white", 
+			"x": "98%", 
+			"y": "98%", 
+			"width": "200", 
+			"height": "200", 
+			"alignment": "top-right", 
+			"textAlignment": "top-right", 
+			"font": "default"
+		}
+	], 
+	"variables": 
+	{ 
+		"bigW": 80, 
+		"bigH": 80
+	}, 
+	"global": 
+	{ 
+		"font": "default", 
+		"width": 50, 
+		"height": 50, 
+		"alignment": "center", 
+		"texture": "white", 
+		"color": "green", 
+		"colorHover": "blue", 
+		"colorSelect": "red"
+	}, 
+	"transition": 
+	{ 
+		"name": "fade", 
+		"time": 1000
+	}
+}

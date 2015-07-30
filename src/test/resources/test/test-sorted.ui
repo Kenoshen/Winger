@@ -1,0 +1,70 @@
+{ 
+	"elements": 
+	[ 
+		{ 
+			"id": "blue", 
+			"color": "blue", 
+			"x": "45%", 
+			"y": "45%", 
+			"z": 4
+		}, 
+		{ 
+			"id": "green", 
+			"color": "green", 
+			"x": "55%", 
+			"y": "45%", 
+			"z": 3
+		}, 
+		{ 
+			"id": "red", 
+			"color": "red", 
+			"x": "55%", 
+			"y": "55%", 
+			"z": 2
+		}, 
+		{ 
+			"id": "yellow", 
+			"color": "yellow", 
+			"x": "45%", 
+			"y": "55%", 
+			"z": 1
+		}, 
+		{ 
+			"id": "back", 
+			"isEnabled": true, 
+			"text": "Back", 
+			"width": "10%", 
+			"height": "10%", 
+			"color": "green", 
+			"texture": "white", 
+			"alignment": "bottom-left", 
+			"transitionOnSelect": "main"
+		}, 
+		{ 
+			"id": "help", 
+			"text": "Demonstrates sorted sprite rendering", 
+			"textColor": "white", 
+			"x": "98%", 
+			"y": "98%", 
+			"width": "200", 
+			"height": "200", 
+			"alignment": "top-right", 
+			"textAlignment": "top-right", 
+			"font": "default"
+		}
+	], 
+	"global": 
+	{ 
+		"font": "default", 
+		"texture": "white", 
+		"isEnabled": false, 
+		"width": 200, 
+		"height": 200, 
+		"alignment": "center"
+	}, 
+	"transition": 
+	{ 
+		"name": "fade", 
+		"time": 1000
+	}
+}

@@ -1,0 +1,52 @@
+{ 
+	"elements": 
+	[ 
+		{ 
+			"id": "display", 
+			"textColor": "white", 
+			"x": "50%", 
+			"y": "30%"
+		}, 
+		{ 
+			"id": "anim", 
+			"x": "50%", 
+			"y": "70%"
+		}, 
+		{ 
+			"id": "back", 
+			"isEnabled": true, 
+			"text": "Back", 
+			"width": "10%", 
+			"height": "10%", 
+			"color": "green", 
+			"texture": "white", 
+			"alignment": "bottom-left", 
+			"transitionOnSelect": "main"
+		}, 
+		{ 
+			"id": "help", 
+			"text": "Shows the fps calculator going up and down", 
+			"textColor": "white", 
+			"x": "98%", 
+			"y": "98%", 
+			"width": "200", 
+			"height": "200", 
+			"alignment": "top-right", 
+			"textAlignment": "top-right", 
+			"font": "default"
+		}
+	], 
+	"global": 
+	{ 
+		"font": "default", 
+		"isEnabled": false, 
+		"width": 200, 
+		"height": 200, 
+		"alignment": "center"
+	}, 
+	"transition": 
+	{ 
+		"name": "fade", 
+		"time": 1000
+	}
+}
