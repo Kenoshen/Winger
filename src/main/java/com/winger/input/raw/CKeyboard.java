@@ -20,6 +20,7 @@ import java.util.List;
  */
 public class CKeyboard
 {
+    public static final CKeyboard instance = new CKeyboard();
     private static final int STATES_TO_KEEP = 30;
     private static final int FRAMES_BETWEEN_PRESS = 5;
     private KeyboardState _state;

@@ -338,4 +338,36 @@ public class CGamePad
     {
         return controller.getAxis(axis);
     }
+
+
+    public void subscribeToAllGamePadEvents(CGamePadEventHandler handler)
+    {
+        subscribeToAllGamePadTriggerEvents(handler);
+        subscribeToAllGamePadButtonEvents(handler);
+        subscribeToAllGamePadStickEvents(handler);
+    }
+
+
+    public void subscribeToAllGamePadTriggerEvents(CGamePadEventHandler handler)
+    {
+        triggerNotifier().subscribeToEvent(handler, CGamePadTrigger.LEFT);
+        triggerNotifier().subscribeToEvent(handler, CGamePadTrigger.RIGHT);
+    }
+
+
+    public void subscribeToAllGamePadButtonEvents(CGamePadEventHandler handler)
+    {
+        for (CGamePadButton button : CGamePadButton.values()) {
+            for (ButtonState state : ButtonState.values()){
+                buttonNotifier().subscribeToEvent(handler, button, state);
+            }
+        }
+    }
+
+
+    public void subscribeToAllGamePadStickEvents(CGamePadEventHandler handler)
+    {
+        thumbStickNotifier().subscribeToEvent(handler, CGamePadStick.LEFT);
+        thumbStickNotifier().subscribeToEvent(handler, CGamePadStick.RIGHT);
+    }
 }

@@ -65,6 +65,7 @@ public class CSpriteBatch
         actualShouldSort = shouldSort;
         if (camera != null)
         {
+            setProjectionMatrix(camera.projection);
             // float v = 0;
             // window = new CRectangle(0, 0, 0, 0);
             // Vector2 topLeft = VectorMath.toVector2(camera.unproject(new Vector3(0, 0, 0)));
