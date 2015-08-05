@@ -16,6 +16,7 @@ public class PlayerBody extends CBody<PlayerBody>
     private float runSlide = 0.07f;
     
     private CircleBody legs;
+    private Joint legsJoint;
     
     private PolygonShape box;
     private CircleShape topCircle;
@@ -97,7 +98,15 @@ public class PlayerBody extends CBody<PlayerBody>
         def.bodyB = legs.body;
         def.collideConnected = false;
         def.localAnchorA.y = -((height - width) + LEGS_POSITION_OFFSET);
-        CWorld.world._world.createJoint(def);
+        legsJoint = CWorld.world._world.createJoint(def);
+        return this;
+    }
+
+    @Override
+    public PlayerBody removeFromWorld(World world){
+        world.destroyJoint(legsJoint);
+        world.destroyBody(body);
+        world.destroyBody(legs.body);
         return this;
     }
     

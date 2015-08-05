@@ -27,6 +27,7 @@ import com.winger.ui.element.impl.ScrollElement;
 import com.winger.ui.element.impl.TextBoxElement;
 import com.winger.utils.ParseUtils;
 
+import javax.xml.bind.ValidationEvent;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -46,6 +47,10 @@ import java.util.List;
     @Type(value = ScrollElement.class, name = "scroll"), @Type(value = TextBoxElement.class, name = "textbox") })
 public abstract class Element<T> implements Iterable<Element<?>>
 {
+    public interface ElementTrigger{
+        void trigger(Element<?> source);
+    }
+    //
     protected final HTMLLogger log;
     //
     protected ElementRecord record;
@@ -74,11 +79,17 @@ public abstract class Element<T> implements Iterable<Element<?>>
     protected boolean isVisible;
     protected boolean hasFocus;
     protected String onHoverStart;
+    protected ElementTrigger onHoverStartFunc;
     protected String onHoverEnd;
+    protected ElementTrigger onHoverEndFunc;
     protected String onSelectStart;
+    protected ElementTrigger onSelectStartFunc;
     protected String onSelectEnd;
+    protected ElementTrigger onSelectEndFunc;
     protected String onDragStart;
+    protected ElementTrigger onDragStartFunc;
     protected String onDragEnd;
+    protected ElementTrigger onDragEndFunc;
     protected String transitionOnSelect;
     //
     protected Element<?> parent;
@@ -98,6 +109,8 @@ public abstract class Element<T> implements Iterable<Element<?>>
     protected float parentWidth = 0;
     protected float parentHeight = 0;
     protected float parentZ = 0;
+    //
+    protected Object userData = null;
     
     
     // ////////////////////////////////////////////////////////
@@ -615,6 +628,9 @@ public abstract class Element<T> implements Iterable<Element<?>>
     {
         isHover(true);
         isSelected(false);
+        if (onHoverStartFunc != null){
+            onHoverStartFunc.trigger(this);
+        }
         return (T) this;
     }
     
@@ -622,6 +638,9 @@ public abstract class Element<T> implements Iterable<Element<?>>
     public T onHoverEndEvent()
     {
         isHover(false);
+        if (onHoverEndFunc != null){
+            onHoverEndFunc.trigger(this);
+        }
         return (T) this;
     }
     
@@ -631,6 +650,9 @@ public abstract class Element<T> implements Iterable<Element<?>>
         isSelected(true);
         isHover(false);
         hasFocus(true);
+        if (onSelectStartFunc != null){
+            onSelectStartFunc.trigger(this);
+        }
         return (T) this;
     }
     
@@ -638,6 +660,9 @@ public abstract class Element<T> implements Iterable<Element<?>>
     public T onSelectEndEvent()
     {
         isSelected(false);
+        if (onSelectEndFunc != null){
+            onSelectEndFunc.trigger(this);
+        }
         return (T) this;
     }
     
@@ -645,6 +670,9 @@ public abstract class Element<T> implements Iterable<Element<?>>
     public T onDragStartEvent()
     {
         isDragging(true);
+        if (onDragStartFunc != null){
+            onDragStartFunc.trigger(this);
+        }
         return (T) this;
     }
     
@@ -652,6 +680,9 @@ public abstract class Element<T> implements Iterable<Element<?>>
     public T onDragEndEvent()
     {
         isDragging(false);
+        if (onDragEndFunc != null){
+            onDragEndFunc.trigger(this);
+        }
         return (T) this;
     }
     
@@ -1094,6 +1125,13 @@ public abstract class Element<T> implements Iterable<Element<?>>
         onHoverStart = value;
         return (T) this;
     }
+
+    public T onHoverStart(String value, ElementTrigger trigger)
+    {
+        onHoverStartFunc = trigger;
+        onHoverStart = value;
+        return (T) this;
+    }
     
     
     public String onHoverEnd()
@@ -1104,6 +1142,13 @@ public abstract class Element<T> implements Iterable<Element<?>>
     
     public T onHoverEnd(String value)
     {
+        onHoverEnd = value;
+        return (T) this;
+    }
+
+    public T onHoverEnd(String value, ElementTrigger trigger)
+    {
+        onHoverEndFunc = trigger;
         onHoverEnd = value;
         return (T) this;
     }
@@ -1120,6 +1165,13 @@ public abstract class Element<T> implements Iterable<Element<?>>
         onSelectStart = value;
         return (T) this;
     }
+
+    public T onSelectStart(String value, ElementTrigger trigger)
+    {
+        onSelectStartFunc = trigger;
+        onSelectStart = value;
+        return (T) this;
+    }
     
     
     public String onSelectEnd()
@@ -1130,6 +1182,13 @@ public abstract class Element<T> implements Iterable<Element<?>>
     
     public T onSelectEnd(String value)
     {
+        onSelectEnd = value;
+        return (T) this;
+    }
+
+    public T onSelectEnd(String value, ElementTrigger trigger)
+    {
+        onSelectEndFunc = trigger;
         onSelectEnd = value;
         return (T) this;
     }
@@ -1146,6 +1205,13 @@ public abstract class Element<T> implements Iterable<Element<?>>
         onDragStart = value;
         return (T) this;
     }
+
+    public T onDragStart(String value, ElementTrigger trigger)
+    {
+        onDragStartFunc = trigger;
+        onDragStart = value;
+        return (T) this;
+    }
     
     
     public String onDragEnd()
@@ -1156,6 +1222,13 @@ public abstract class Element<T> implements Iterable<Element<?>>
     
     public T onDragEnd(String value)
     {
+        onDragEnd = value;
+        return (T) this;
+    }
+
+    public T onDragEnd(String value, ElementTrigger trigger)
+    {
+        onDragEndFunc = trigger;
         onDragEnd = value;
         return (T) this;
     }
@@ -1177,5 +1250,15 @@ public abstract class Element<T> implements Iterable<Element<?>>
     public List<Element<?>> children()
     {
         return children;
+    }
+
+
+    public Object userData(){
+        return userData;
+    }
+
+    public T userData(Object value){
+        userData = value;
+        return (T) this;
     }
 }
