@@ -10,10 +10,7 @@ import com.winger.log.HTMLLogger;
 import com.winger.log.LogGroup;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * Parses and allows access to JSON-formatted data structures. At a low level, JSON is basically a HashMap/List of HashMaps. Very useful data type for
@@ -962,5 +959,34 @@ public class JSON implements Iterable<Object>
     {
         return getJsonAsList().iterator();
     }
-    
+
+    public Map<String, Object> flatten() {
+        Map<String, Object> m = new HashMap<>();
+        flattenRecurse(m, null, this);
+        return m;
+    }
+
+    private void flattenRecurse(Map<String, Object> map, String heritage, JSON obj){
+        if (obj != null){
+            if (obj.isArray){
+                for (int i = 0; i < obj.length(); i++){
+                    Object o = obj.get("" + i);
+                    if (o instanceof JSON) {
+                        flattenRecurse(map, heritage + (heritage != null ? "." : "") + i, (JSON) o);
+                    } else {
+                        map.put((heritage != null ? "." : "") + i, o);
+                    }
+                }
+            } else {
+                properties().forEach(prop -> {
+                    Object o = get(prop);
+                    if (o instanceof JSON){
+                        flattenRecurse(map, heritage + (heritage != null ? "." : "") + prop, (JSON) o);
+                    } else {
+                        map.put((heritage != null ? "." : "") + prop, o);
+                    }
+                });
+            }
+        }
+    }
 }
