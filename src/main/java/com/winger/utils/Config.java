@@ -6,6 +6,7 @@ import com.winger.log.HTMLLogger;
 import com.winger.log.LogGroup;
 import com.winger.struct.JSON;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.HashMap;
@@ -32,7 +33,7 @@ public class Config {
     }
 
     public Config(String fileLocation, boolean watch){
-        this(Gdx.files.internal(fileLocation), watch);
+        this(new FileHandle(new File(fileLocation)), watch);
     }
 
     public Config(FileHandle fileHandle, boolean watch){
@@ -90,6 +91,8 @@ public class Config {
                 }
             }
         }
+
+        log.debug("Config: " + data);
     }
 
     public <T> T get(String path){
@@ -97,7 +100,7 @@ public class Config {
             Object o = data.get(path);
             return (T) o;
         } else {
-            return null;
+            throw new RuntimeException("Config value does not exist: " + path);
         }
     }
 
@@ -106,7 +109,7 @@ public class Config {
             Object o = data.get(path);
             return type.cast(o);
         } else {
-            return null;
+            throw new RuntimeException("Config value does not exist: " + path);
         }
     }
 

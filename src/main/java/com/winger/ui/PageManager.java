@@ -30,7 +30,7 @@ import java.util.Map;
 public class PageManager extends Notifiers.Notifier3<PageEventHandler, String, String>
 {
     private static final HTMLLogger log = HTMLLogger.getLogger(PageManager.class, LogGroup.Framework, LogGroup.GUI, LogGroup.UI);
-    private static final String pageFileExtension = "ui";
+    private static final String pageFileExtension = "imgs.ui";
     private static PageManager instance;
     private Map<String, Tup2<Page, JSON>> pages = new HashMap<String, Tup2<Page, JSON>>();
     private CSpriteBatch uiSpriteBatch = new CSpriteBatch();
@@ -49,7 +49,7 @@ public class PageManager extends Notifiers.Notifier3<PageEventHandler, String, S
     }
     
     /**
-     * Searches in a directory for files with a .ui extension and tries to parse them into Page objects
+     * Searches in a directory for files with a .imgs.ui extension and tries to parse them into Page objects
      * 
      * @param directory
      */
@@ -93,7 +93,7 @@ public class PageManager extends Notifiers.Notifier3<PageEventHandler, String, S
     
     
     /**
-     * Searches in a directory for files with a .ui extension and tries to parse them into Page objects
+     * Searches in a directory for files with a .imgs.ui extension and tries to parse them into Page objects
      * 
      * @param pathToDirectory
      */

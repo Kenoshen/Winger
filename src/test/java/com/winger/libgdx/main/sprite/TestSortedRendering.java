@@ -23,10 +23,10 @@ public class TestSortedRendering
     {
         this.ui = ui;
         //
-        // sprites.put("blue", new CSprite("blue.stand", ui.getElementById("blue").getAbsoluteBoundingBox(), false));
-        // sprites.put("green", new CSprite("green.stand", ui.getElementById("green").getAbsoluteBoundingBox(), false));
-        // sprites.put("red", new CSprite("red.stand", ui.getElementById("red").getAbsoluteBoundingBox(), false));
-        // sprites.put("yellow", new CSprite("yellow.stand", ui.getElementById("yellow").getAbsoluteBoundingBox(), false));
+        // sprites.put("blue", new CSprite("blue.stand", imgs.ui.getElementById("blue").getAbsoluteBoundingBox(), false));
+        // sprites.put("green", new CSprite("green.stand", imgs.ui.getElementById("green").getAbsoluteBoundingBox(), false));
+        // sprites.put("red", new CSprite("red.stand", imgs.ui.getElementById("red").getAbsoluteBoundingBox(), false));
+        // sprites.put("yellow", new CSprite("yellow.stand", imgs.ui.getElementById("yellow").getAbsoluteBoundingBox(), false));
     }
     
     

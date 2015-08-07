@@ -361,28 +361,28 @@ red.throw2
   orig: 105, 105
   offset: 0, 0
   index: -1
-ui.blueBox
+imgs.ui.blueBox
   rotate: false
   xy: 1760, 288
   size: 5, 5
   orig: 5, 5
   offset: 0, 0
   index: -1
-ui.greenBox
+imgs.ui.greenBox
   rotate: false
   xy: 1760, 281
   size: 5, 5
   orig: 5, 5
   offset: 0, 0
   index: -1
-ui.redBox
+imgs.ui.redBox
   rotate: false
   xy: 1760, 274
   size: 5, 5
   orig: 5, 5
   offset: 0, 0
   index: -1
-ui.yellowBox
+imgs.ui.yellowBox
   rotate: false
   xy: 1760, 267
   size: 5, 5

@@ -1,7 +1,7 @@
 package com.winger.ui;
 
 /**
- * Enum for ui event types
+ * Enum for imgs.ui event types
  *
  * @author Michael P. Wingfield
  * @copyright Nov 4, 2014
