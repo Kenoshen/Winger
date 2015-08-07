@@ -1,15 +1,18 @@
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
 
-repositories {
-    mavenCentral()
-}
+ext.server = 'http://www.bytebreakstudios.com:8081/artifactory'
 ext.gdxVersion = '1.6.4'
+ext.jacksonVersion = '2.6.0'
+
+repositories.maven { url "$server/all" }
+
 dependencies {
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.6.0'
-    compile 'com.fasterxml.jackson.core:jackson-core:2.6.0'
-    compile 'com.fasterxml.jackson.core:jackson-annotations:2.6.0'
+    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    compile "com.fasterxml.jackson.core:jackson-core:$jacksonVersion"
+    compile "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
 
     testCompile 'junit:junit:4.12'
 
@@ -21,6 +24,13 @@ dependencies {
     testCompile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
 }
 
+group = 'com.winger'
+version = '0.1.0-SNAPSHOT'
+
+task zipDependencies(type: Zip) {
+    from configurations.all
+}
+
 task fatJar(type: Jar) {
     baseName = project.name + '-all'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
@@ -28,7 +38,29 @@ task fatJar(type: Jar) {
 }
 
 jar {
-    version =  '0.1.0'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
 
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url chooseRepositoryFor(version)
+            credentials {
+                username 'winger'
+                password 'winger'
+            }
+        }
+    }
+}
+
+def chooseRepositoryFor(version) {
+    def isSnapshot = version.endsWith('-SNAPSHOT')
+    def repositoryType = isSnapshot ? 'snapshot' : 'release'
+    def repository = "libs-$repositoryType-local"
+    return "$server/$repository"
+}
