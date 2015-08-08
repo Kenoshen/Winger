@@ -41,12 +41,12 @@ public class TextBoxElement extends Element<TextBoxElement>
         allowed = get("allowed");
         notAllowed = get("notAllowed");
 
-        maxChar = parseNumber(get("maxChar"), -1);
+        maxChar = parseNumber((Number) get("maxChar"), -1);
         if (text() == null)
         {
             text("");
         }
-        index = parseNumber(get("index"), text().length());
+        index = parseNumber((Number) get("index"), text().length());
         
         return this;
     }

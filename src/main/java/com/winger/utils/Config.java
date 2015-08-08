@@ -1,14 +1,11 @@
 package com.winger.utils;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.winger.log.HTMLLogger;
 import com.winger.log.LogGroup;
 import com.winger.struct.JSON;
 
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -114,9 +111,12 @@ public class Config {
     }
 
     private void watch(){
-        WatchUtils.watchForModify(fileHandle, () -> {
-            log.info("Parse Config File again");
-            parse();
+        WatchUtils.watchForModify(fileHandle, new WatchUtils.WatchFunc() {
+            @Override
+            public void trigger() {
+                log.info("Parse Config File again");
+                parse();
+            }
         });
     }
 }

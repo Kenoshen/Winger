@@ -67,17 +67,17 @@ public class DragDropElement extends Element<DragDropElement> implements TweenIs
         
         super.initialize();
 
-        dragColor = parseColor(get("dragColor"), Color.WHITE);
-        useIcon = parseBoolean(get("useIcon"), true);
-        useBackground = parseBoolean(get("useBackground"), true);
-        useText = parseBoolean(get("useText"), true);
-        centerOnMouse = parseBoolean(get("centerOnMouse"), false);
-        moveOnDrag = parseBoolean(get("moveOnDrag"), false);
-        snapToX = parseBoolean(get("snapToX"), false);
-        snapToY = parseBoolean(get("snapToY"), false);
-        hasBounds = parseBoolean(get("hasBounds"), false);
-        defaultIsDropOk = parseBoolean(get("defaultIsDropOk"), true);
-        resetDragRoot = parseBoolean(get("resetDragRoot"), false);
+        dragColor = parseColor((String) get("dragColor"), Color.WHITE);
+        useIcon = parseBoolean((Boolean) get("useIcon"), true);
+        useBackground = parseBoolean((Boolean) get("useBackground"), true);
+        useText = parseBoolean((Boolean) get("useText"), true);
+        centerOnMouse = parseBoolean((Boolean) get("centerOnMouse"), false);
+        moveOnDrag = parseBoolean((Boolean) get("moveOnDrag"), false);
+        snapToX = parseBoolean((Boolean) get("snapToX"), false);
+        snapToY = parseBoolean((Boolean) get("snapToY"), false);
+        hasBounds = parseBoolean((Boolean) get("hasBounds"), false);
+        defaultIsDropOk = parseBoolean((Boolean) get("defaultIsDropOk"), true);
+        resetDragRoot = parseBoolean((Boolean) get("resetDragRoot"), false);
         right = parsePercentage(get("right"), parentWidth);
         left = parsePercentage(get("left"), parentWidth);
         top = parsePercentage(get("top"), parentHeight);

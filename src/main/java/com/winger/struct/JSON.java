@@ -978,14 +978,14 @@ public class JSON implements Iterable<Object>
                     }
                 }
             } else {
-                properties().forEach(prop -> {
+                for (String prop : properties()){
                     Object o = get(prop);
                     if (o instanceof JSON){
                         flattenRecurse(map, heritage + (heritage != null ? "." : "") + prop, (JSON) o);
                     } else {
                         map.put((heritage != null ? "." : "") + prop, o);
                     }
-                });
+                }
             }
         }
     }

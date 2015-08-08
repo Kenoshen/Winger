@@ -74,12 +74,12 @@ public class ScrollElement extends ContainerElement<ScrollElement> implements Pa
             barSettings = JSON.emptyObject();
         }
 
-        horizontalScroll = parseBoolean(barSettings.get("horizontalScroll"), true);
-        verticalScroll = parseBoolean(barSettings.get("verticalScroll"), true);
-        horizontalFlip = parseBoolean(barSettings.get("horizontalFlip"), false);
-        verticalFlip = parseBoolean(barSettings.get("verticalFlip"), false);
-        horizontalThickness = parseNumber(barSettings.get("horizontalThickness"), 15f);
-        verticalThickness = parseNumber(barSettings.get("verticalThickness"), 15f);
+        horizontalScroll = parseBoolean((Boolean) barSettings.get("horizontalScroll"), true);
+        verticalScroll = parseBoolean((Boolean) barSettings.get("verticalScroll"), true);
+        horizontalFlip = parseBoolean((Boolean) barSettings.get("horizontalFlip"), false);
+        verticalFlip = parseBoolean((Boolean) barSettings.get("verticalFlip"), false);
+        horizontalThickness = parseNumber((Number) barSettings.get("horizontalThickness"), 15f);
+        verticalThickness = parseNumber((Number) barSettings.get("verticalThickness"), 15f);
         
         Vector2 bottomLeft = new Vector2(0, 0);
         bottomLeft.x -= width() * alignment().alignmentVector().x;

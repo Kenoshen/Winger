@@ -49,45 +49,45 @@ public class ToggleElement extends Element<ToggleElement>
         super.initialize();
         //
         // get booleans
-        isToggled = parseBoolean(get("isToggled"), false);
+        isToggled = parseBoolean((Boolean) get("isToggled"), false);
         
         //
         // get colors
-        onColor = parseColor(get("onColor"), color);
-        onColorHover = parseColor(get("onColorHover"), colorHover);
-        onColorSelect = parseColor(get("onColorSelect"), colorSelect);
+        onColor = parseColor((String) get("onColor"), color);
+        onColorHover = parseColor((String) get("onColorHover"), colorHover);
+        onColorSelect = parseColor((String) get("onColorSelect"), colorSelect);
         //
         // get textures
-        onIcon = parseTexture(get("onIcon"));
+        onIcon = parseTexture((String) get("onIcon"));
         if (onIcon == null)
             onIcon = icon;
-        onTexture = parseTexture(get("onTexture"));
+        onTexture = parseTexture((String) get("onTexture"));
         if (onTexture == null)
             onTexture = texture;
-        onTextureHover = parseTexture(get("onTextureHover"));
+        onTextureHover = parseTexture((String) get("onTextureHover"));
         if (onTextureHover == null)
             onTextureHover = textureHover;
-        onTextureSelect = parseTexture(get("onTextureSelect"));
+        onTextureSelect = parseTexture((String) get("onTextureSelect"));
         if (onTextureSelect == null)
             onTextureSelect = textureSelect;
         
         //
         // get colors
-        offColor = parseColor(get("offColor"), color);
-        offColorHover = parseColor(get("offColorHover"), colorHover);
-        offColorSelect = parseColor(get("offColorSelect"), colorSelect);
+        offColor = parseColor((String) get("offColor"), color);
+        offColorHover = parseColor((String) get("offColorHover"), colorHover);
+        offColorSelect = parseColor((String) get("offColorSelect"), colorSelect);
         //
         // get textures
-        offIcon = parseTexture(get("offIcon"));
+        offIcon = parseTexture((String) get("offIcon"));
         if (offIcon == null)
             offIcon = icon;
-        offTexture = parseTexture(get("offTexture"));
+        offTexture = parseTexture((String) get("offTexture"));
         if (offTexture == null)
             offTexture = texture;
-        offTextureHover = parseTexture(get("offTextureHover"));
+        offTextureHover = parseTexture((String) get("offTextureHover"));
         if (offTextureHover == null)
             offTextureHover = textureHover;
-        offTextureSelect = parseTexture(get("offTextureSelect"));
+        offTextureSelect = parseTexture((String) get("offTextureSelect"));
         if (offTextureSelect == null)
             offTextureSelect = textureSelect;
         

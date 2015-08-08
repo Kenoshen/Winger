@@ -27,7 +27,6 @@ import com.winger.ui.element.impl.ScrollElement;
 import com.winger.ui.element.impl.TextBoxElement;
 import com.winger.utils.ParseUtils;
 
-import javax.xml.bind.ValidationEvent;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -239,9 +238,9 @@ public abstract class Element<T> implements Iterable<Element<?>>
         transitionOnSelect = get("transitionOnSelect");
         //
         // get booleans
-        isEnabled = parseBoolean(get("isEnabled"), true);
-        isVisible = parseBoolean(get("isVisible"), true);
-        hasFocus = parseBoolean(get("hasFocus"), false);
+        isEnabled = parseBoolean((Boolean) get("isEnabled"), true);
+        isVisible = parseBoolean((Boolean) get("isVisible"), true);
+        hasFocus = parseBoolean((Boolean) get("hasFocus"), false);
         //
         // calculate percentages
         if (parent != null)
@@ -258,23 +257,23 @@ public abstract class Element<T> implements Iterable<Element<?>>
         height = parsePercentage(get("height"), parentHeight);
         //
         // get alignments
-        alignment = parseAlignment(get("alignment"));
-        textAlignment = parseAlignment(get("textAlignment"));
+        alignment = parseAlignment((String) get("alignment"));
+        textAlignment = parseAlignment((String) get("textAlignment"));
         //
         // get colors
-        color = parseColor(get("color"), Color.WHITE);
-        colorHover = parseColor(get("colorHover"), Color.WHITE);
-        colorSelect = parseColor(get("colorSelect"), Color.WHITE);
-        textColor = parseColor(get("textColor"), Color.BLACK);
+        color = parseColor((String) get("color"), Color.WHITE);
+        colorHover = parseColor((String) get("colorHover"), Color.WHITE);
+        colorSelect = parseColor((String) get("colorSelect"), Color.WHITE);
+        textColor = parseColor((String) get("textColor"), Color.BLACK);
         //
         // get textures
-        icon = parseTexture(get("icon"));
-        texture = parseTexture(get("texture"));
-        textureHover = parseTexture(get("textureHover"));
-        textureSelect = parseTexture(get("textureSelect"));
+        icon = parseTexture((String) get("icon"));
+        texture = parseTexture((String) get("texture"));
+        textureHover = parseTexture((String) get("textureHover"));
+        textureSelect = parseTexture((String) get("textureSelect"));
         //
         // get fonts
-        font = parseFont(get("font"));
+        font = parseFont((String) get("font"));
         return (T) this;
     }
     

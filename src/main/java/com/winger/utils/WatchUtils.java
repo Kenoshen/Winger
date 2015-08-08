@@ -19,7 +19,7 @@ public class WatchUtils {
     }
 
 
-    public static void watchForModify(FileHandle fileHandle, WatchFunc func){
+    public static void watchForModify(FileHandle fileHandle, final WatchFunc func){
         if (fileHandle == null){
             throw new RuntimeException("File handle cannot be null");
         }
@@ -29,15 +29,16 @@ public class WatchUtils {
         if (fileHandle.isDirectory()){
             throw new RuntimeException("Cannot catch modify events on a directory");
         }
-        Path path = FileSystems.getDefault().getPath(fileHandle.parent().file().getAbsolutePath());
+        final Path path = FileSystems.getDefault().getPath(fileHandle.parent().file().getAbsolutePath());
+        final String fileHandleName = fileHandle.name();
         try{
-            WatchService watchService = FileSystems.getDefault().newWatchService();
+            final WatchService watchService = FileSystems.getDefault().newWatchService();
             path.register(watchService, StandardWatchEventKinds.ENTRY_MODIFY);
             Thread thread = new Thread() {
                 @Override
                 public void run() {
                     int tries = 10;
-                    log.debug("Watching " + path + " for changes to " + fileHandle.name());
+                    log.debug("Watching " + path + " for changes to " + fileHandleName);
 
                     while (true)
                     {
@@ -47,7 +48,7 @@ public class WatchUtils {
                                 //we only register "ENTRY_MODIFY" so the context is always a Path.
                                 final Path changed = (Path) event.context();
                                 log.debug(changed + " has been modified");
-                                if (changed.endsWith(fileHandle.name())) {
+                                if (changed.endsWith(fileHandleName)) {
                                     func.trigger();
                                 }
                             }

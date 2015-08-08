@@ -35,8 +35,8 @@ public class GridElement extends ContainerElement<GridElement>
     {
         super.initialize();
 
-        row = parseNumber(get("row"), -1);
-        column = parseNumber(get("column"), -1);
+        row = parseNumber((Number) get("row"), -1);
+        column = parseNumber((Number) get("column"), -1);
         
         return this;
     }
