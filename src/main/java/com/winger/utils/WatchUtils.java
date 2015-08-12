@@ -14,7 +14,7 @@ public class WatchUtils {
     private final static HTMLLogger log = HTMLLogger.getLogger(WatchUtils.class, LogGroup.System, LogGroup.Framework, LogGroup.Util);
     private WatchUtils(){}
 
-    interface WatchFunc {
+    public interface WatchFunc {
         void trigger();
     }
 

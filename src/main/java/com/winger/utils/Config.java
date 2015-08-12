@@ -1,11 +1,11 @@
 package com.winger.utils;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.winger.log.HTMLLogger;
 import com.winger.log.LogGroup;
 import com.winger.struct.JSON;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,22 +15,17 @@ import java.util.Map;
  * Created by mwingfield on 8/4/15.
  */
 public class Config {
-    private final static String DEFAULT_CONFIG_PATH = "./project.config";
     private final static HTMLLogger log = HTMLLogger.getLogger(Config.class, LogGroup.System, LogGroup.Framework, LogGroup.Util);
 
     private FileHandle fileHandle;
     private Map<String, Object> data;
 
     public Config(){
-        this(DEFAULT_CONFIG_PATH, false);
-    }
 
-    public Config(boolean watch){
-        this(DEFAULT_CONFIG_PATH, watch);
     }
 
     public Config(String fileLocation, boolean watch){
-        this(new FileHandle(new File(fileLocation)), watch);
+        this(Gdx.files.internal(fileLocation), watch);
     }
 
     public Config(FileHandle fileHandle, boolean watch){
