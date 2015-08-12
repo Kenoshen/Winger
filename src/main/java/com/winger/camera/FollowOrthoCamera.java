@@ -135,10 +135,10 @@ public class FollowOrthoCamera extends OrthographicCamera {
 
         if (limitWindow){
             minX = (minX < limitWindowMinX ? limitWindowMinX : (minX > limitWindowMaxX ? limitWindowMaxX : minX));
-            maxX = (maxX < limitWindowMinX ? limitWindowMinX : (maxX > limitWindowMaxX ? limitWindowMaxX : maxX));
+            maxX = (maxX > limitWindowMaxX ? limitWindowMaxX : (maxX < limitWindowMinX ? limitWindowMinX : maxX));
 
             minY = (minY < limitWindowMinY ? limitWindowMinY : (minY > limitWindowMaxY ? limitWindowMaxY : minY));
-            maxY = (maxY < limitWindowMinY ? limitWindowMinY : (maxY > limitWindowMaxY ? limitWindowMaxY : maxY));
+            maxY = (maxY > limitWindowMaxY ? limitWindowMaxY : (maxY < limitWindowMinY ? limitWindowMinY : maxY));
 
         }
 
